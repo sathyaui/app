@@ -1,0 +1,70 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+
+@import "compass/css3";
+@import "scss/fonts";
+@import "scss/variables";
+@import "scss/fontawesome/font-awesome";
+@import "scss/common";
+
+// Hgroup
+h1, h2 {font-family:$font-secondary; font-weight:700;}
+// Sign up
+#signUp {
+	padding:80px 15px;
+	.formMessageArea {margin:0 auto; width:270px;}
+	h2 {color:white; font-size:24px; padding-bottom:3px;}
+	p {padding-bottom:35px;}
+}
+#setTwitter, #verifyNumber, #confirmation {display:none;}
+
+// Button
+.button  {border:none; cursor:pointer; display:inline-block; font-weight:bold; min-width:176px; padding:15px 20px; text-align:center; text-transform:uppercase;
+	&.button-white {
+		background-color:white;
+		color:$primary-color;
+	}
+}
+.backArrow {border:1px solid white; @include border-radius(100%); color:white; font-size:20px; line-height:45px; height:45px; left:15px; position:absolute; text-align:center; top:15px; width:45px;}
+
+// Floating form
+.formGroup {padding:60px 0px 40px;}
+.group {
+	margin-bottom:30px; 
+  	position:relative; 
+  	&:last-child {margin-bottom:0px;}
+  	.inputMaterial {
+  		background-color:transparent;
+		padding:10px 0px;
+		display:block;
+		width:100%;
+		border:none;
+		border-bottom:1px solid $green;
+	}
+	label {
+		color:white; 
+		font-size:11px;
+		position:absolute;
+		pointer-events:none;
+		left:0px;
+		text-transform:uppercase;
+		top:11px;
+		transition:0.2s ease all; 
+		-moz-transition:0.2s ease all; 
+		-webkit-transition:0.2s ease all;
+	}
+	.inputMaterial:focus ~ label, .inputMaterial:valid ~ label {
+		top:-8px;
+	}
+}
